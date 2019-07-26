@@ -1,0 +1,280 @@
+openapi: "3.0.1"
+info:
+  version: 1.0.0
+  title: SportRadar Soccer API
+  license:
+    name: MIT
+servers:
+  - url: https://api.sportradar.us/soccer-{access_level}3/{league_group}/{language_code}/
+    description: Sportradar's Soccer API Version 3 Trial
+    variables:
+      access_level:
+        default: x
+        enum:
+          - x
+          - t
+      league_group:
+        default: global
+        enum:
+          - eu
+          - intl
+          - am
+          - as
+          - global
+          - other
+      language_code:
+        default: en
+
+components:
+  securitySchemes:
+    defaultSecurityScheme:
+      type: apiKey
+      in: query
+      name: api_key
+  schemas:
+    Sport:
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+    Category:
+      required:
+        - id
+        - name
+        - country_code
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        country_code:
+          type: string
+    Tournament:
+      required:
+        - id
+        - name
+        - sport
+        - category
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        sport:
+            $ref: "#/components/schemas/Sport"
+        category:
+            $ref: "#/components/schemas/Category"
+    Competitor:
+      required:
+        - id
+        - name
+        - country
+        - country_code
+        - abbreviation
+        - qualifier
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        country:
+          type: string
+        country_code:
+          type: string
+        abbreviation:
+          type: string
+        qualifier:
+          type: string
+    Venue:
+      required:
+        - id
+        - name
+        - capacity
+        - city_name
+        - country_name
+        - map_coordinates
+        - country_code
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        capacity:
+          type: integer
+        city_name:
+          type: string
+        country_name:
+          type: string
+        map_coordinates:
+          type: string
+        country_code:
+          type: string
+    TournamentRound:
+      required:
+        - type
+        - number
+        - phase
+      properties:
+        type:
+          type: string
+        number:
+          type: integer
+        phase:
+          type: string
+    Season:
+      required:
+        - id
+        - name
+        - start_date
+        - end_date
+        - year
+        - tournament_id
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        start_date:
+          type: string
+          format: date
+        end_date:
+          type: string
+          format: date
+        year:
+          type: string
+        tournament_id:
+          type: string
+    PeriodScore:
+      required:
+        - number
+        - type
+        - home_score
+        - away_score
+      properties:
+        number:
+          type: integer
+        type:
+          type: string
+        home_score:
+          type: integer
+        away_score:
+          type: integer
+    SportEventStatus:
+      required:
+        - status
+        - match_status
+        - home_score
+        - away_score
+        - winner_id
+        - period_scores
+      properties:
+        status:
+          type: string
+        match_status:
+          type: string
+        home_score:
+          type: integer
+        away_score:
+          type: integer
+        winner_id:
+          type: string
+        period_scores:
+          type: array
+          items:
+            $ref: "#/components/schemas/PeriodScore"
+    SportEvent:
+      required:
+        - id
+        - scheduled
+        - start_time_tbd
+        - tournament_round
+        - season
+        - tournament
+        - competitors
+        - venue
+      properties:
+        id:
+          type: string
+        scheduled:
+          type: string
+          format: date-time
+        start_time_tbd:
+          type: boolean
+        tournament_round:
+            $ref: "#/components/schemas/TournamentRound"
+        season:
+            $ref: "#/components/schemas/Season"
+        tournament:
+            $ref: "#/components/schemas/Tournament"
+        competitors:
+          type: array
+          items: 
+            $ref: "#/components/schemas/Competitor"
+        venue:
+            $ref: "#/components/schemas/Venue"
+    DailyResult:
+      required:
+        - sport_event
+        - sport_event_status
+      properties:
+        sport_event:
+            $ref: "#/components/schemas/SportEvent"
+        sport_event_status:
+            $ref: "#/components/schemas/SportEventStatus"
+    DailyResults:
+      required:
+        - generated_at
+        - schema
+        - results
+      properties:
+        generated_at:
+          type: string
+          format: date-time
+        schema:
+          type: string
+        results:
+          type: array
+          items:
+            $ref: "#/components/schemas/DailyResult"
+
+security:
+  - defaultSecurityScheme: []
+
+paths:
+  /schedules/{year}-{month}-{day}/results.json:
+    get:
+      summary: Get daily results
+      operationId: getDailyResults
+      parameters:
+        - name: year
+          in: path
+          description: The calendar year
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: month
+          in: path
+          description: The calendar month
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: day
+          in: path
+          description: The calendar day
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Array of available practices
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/DailyResults"

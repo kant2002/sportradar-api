@@ -1,0 +1,328 @@
+﻿{
+  "generated_at": "2019-07-26T12:46:13+00:00",
+  "schema": "http:\/\/schemas.sportradar.com\/bsa\/soccer\/v1\/json\/endpoints\/soccer\/results.json",
+  "results": [
+    {
+      "sport_event": {
+        "id": "sr:match:15382838",
+        "scheduled": "2019-04-01T16:00:00+00:00",
+        "start_time_tbd": false,
+        "tournament_round": {
+          "type": "group",
+          "number": 26
+        },
+        "season": {
+          "id": "sr:season:55979",
+          "name": "Super League 18\/19",
+          "start_date": "2018-08-25",
+          "end_date": "2019-05-23",
+          "year": "18\/19",
+          "tournament_id": "sr:tournament:185"
+        },
+        "tournament": {
+          "id": "sr:tournament:185",
+          "name": "Super League 1",
+          "sport": {
+            "id": "sr:sport:1",
+            "name": "Soccer"
+          },
+          "category": {
+            "id": "sr:category:67",
+            "name": "Greece",
+            "country_code": "GRC"
+          }
+        },
+        "competitors": [
+          {
+            "id": "sr:competitor:6988",
+            "name": "GS Apollon Smyrnis",
+            "country": "Greece",
+            "country_code": "GRC",
+            "abbreviation": "APS",
+            "qualifier": "home"
+          },
+          {
+            "id": "sr:competitor:3248",
+            "name": "Panathinaikos Athens",
+            "country": "Greece",
+            "country_code": "GRC",
+            "abbreviation": "PAN",
+            "qualifier": "away"
+          }
+        ],
+        "venue": {
+          "id": "sr:venue:12573",
+          "name": "Georgios Kamaras Stadium",
+          "capacity": 14856,
+          "city_name": "Athens",
+          "country_name": "Greece",
+          "country_code": "GRC"
+        }
+      },
+      "sport_event_status": {
+        "status": "closed",
+        "match_status": "ended",
+        "home_score": 1,
+        "away_score": 3,
+        "winner_id": "sr:competitor:3248",
+        "period_scores": [
+          {
+            "home_score": 0,
+            "away_score": 1,
+            "type": "regular_period",
+            "number": 1
+          },
+          {
+            "home_score": 1,
+            "away_score": 2,
+            "type": "regular_period",
+            "number": 2
+          }
+        ]
+      }
+    },
+    {
+      "sport_event": {
+        "id": "sr:match:14701239",
+        "scheduled": "2019-04-01T18:30:00+00:00",
+        "start_time_tbd": false,
+        "tournament_round": {
+          "type": "group",
+          "number": 30,
+          "phase": "regular season"
+        },
+        "season": {
+          "id": "sr:season:54373",
+          "name": "Ligue 1 18\/19",
+          "start_date": "2018-08-10",
+          "end_date": "2019-06-03",
+          "year": "18\/19",
+          "tournament_id": "sr:tournament:34"
+        },
+        "tournament": {
+          "id": "sr:tournament:34",
+          "name": "Ligue 1",
+          "sport": {
+            "id": "sr:sport:1",
+            "name": "Soccer"
+          },
+          "category": {
+            "id": "sr:category:7",
+            "name": "France",
+            "country_code": "FRA"
+          }
+        },
+        "competitors": [
+          {
+            "id": "sr:competitor:1678",
+            "name": "AS Saint-Etienne",
+            "country": "France",
+            "country_code": "FRA",
+            "abbreviation": "STE",
+            "qualifier": "home"
+          },
+          {
+            "id": "sr:competitor:1663",
+            "name": "Olympique Nimes",
+            "country": "France",
+            "country_code": "FRA",
+            "abbreviation": "NIM",
+            "qualifier": "away"
+          }
+        ],
+        "venue": {
+          "id": "sr:venue:845",
+          "name": "Stade Geoffroy Guichard",
+          "capacity": 42000,
+          "city_name": "Saint Etienne",
+          "country_name": "France",
+          "map_coordinates": "45.460833,4.390278",
+          "country_code": "FRA"
+        }
+      },
+      "sport_event_status": {
+        "status": "closed",
+        "match_status": "ended",
+        "home_score": 2,
+        "away_score": 1,
+        "winner_id": "sr:competitor:1678",
+        "period_scores": [
+          {
+            "home_score": 1,
+            "away_score": 1,
+            "type": "regular_period",
+            "number": 1
+          },
+          {
+            "home_score": 1,
+            "away_score": 0,
+            "type": "regular_period",
+            "number": 2
+          }
+        ]
+      }
+    },
+    {
+      "sport_event": {
+        "id": "sr:match:14736861",
+        "scheduled": "2019-04-01T19:00:00+00:00",
+        "start_time_tbd": false,
+        "tournament_round": {
+          "type": "group",
+          "number": 32,
+          "phase": "regular season"
+        },
+        "season": {
+          "id": "sr:season:54571",
+          "name": "Premier League 18\/19",
+          "start_date": "2018-08-10",
+          "end_date": "2019-05-13",
+          "year": "18\/19",
+          "tournament_id": "sr:tournament:17"
+        },
+        "tournament": {
+          "id": "sr:tournament:17",
+          "name": "Premier League",
+          "sport": {
+            "id": "sr:sport:1",
+            "name": "Soccer"
+          },
+          "category": {
+            "id": "sr:category:1",
+            "name": "England",
+            "country_code": "ENG"
+          }
+        },
+        "competitors": [
+          {
+            "id": "sr:competitor:42",
+            "name": "Arsenal FC",
+            "country": "England",
+            "country_code": "ENG",
+            "abbreviation": "ARS",
+            "qualifier": "home"
+          },
+          {
+            "id": "sr:competitor:39",
+            "name": "Newcastle United",
+            "country": "England",
+            "country_code": "ENG",
+            "abbreviation": "NEW",
+            "qualifier": "away"
+          }
+        ],
+        "venue": {
+          "id": "sr:venue:624",
+          "name": "Emirates Stadium",
+          "capacity": 60272,
+          "city_name": "London",
+          "country_name": "England",
+          "map_coordinates": "51.555050,-0.108046",
+          "country_code": "ENG"
+        }
+      },
+      "sport_event_status": {
+        "status": "closed",
+        "match_status": "ended",
+        "home_score": 2,
+        "away_score": 0,
+        "winner_id": "sr:competitor:42",
+        "period_scores": [
+          {
+            "home_score": 1,
+            "away_score": 0,
+            "type": "regular_period",
+            "number": 1
+          },
+          {
+            "home_score": 1,
+            "away_score": 0,
+            "type": "regular_period",
+            "number": 2
+          }
+        ]
+      }
+    },
+    {
+      "sport_event": {
+        "id": "sr:match:14946235",
+        "scheduled": "2019-04-01T19:15:00+00:00",
+        "start_time_tbd": false,
+        "tournament_round": {
+          "type": "group",
+          "number": 27,
+          "phase": "main_round_1"
+        },
+        "season": {
+          "id": "sr:season:55243",
+          "name": "Primeira Liga 18\/19",
+          "start_date": "2018-08-10",
+          "end_date": "2019-05-19",
+          "year": "18\/19",
+          "tournament_id": "sr:tournament:238"
+        },
+        "tournament": {
+          "id": "sr:tournament:238",
+          "name": "Primeira Liga",
+          "sport": {
+            "id": "sr:sport:1",
+            "name": "Soccer"
+          },
+          "category": {
+            "id": "sr:category:44",
+            "name": "Portugal",
+            "country_code": "PRT"
+          }
+        },
+        "competitors": [
+          {
+            "id": "sr:competitor:4501",
+            "name": "CD Feirense",
+            "country": "Portugal",
+            "country_code": "PRT",
+            "abbreviation": "FEI",
+            "qualifier": "home"
+          },
+          {
+            "id": "sr:competitor:3008",
+            "name": "Vitoria Setubal",
+            "country": "Portugal",
+            "country_code": "PRT",
+            "abbreviation": "SET",
+            "qualifier": "away"
+          }
+        ],
+        "venue": {
+          "id": "sr:venue:2555",
+          "name": "Estadio Marcolino de Castro",
+          "capacity": 5600,
+          "city_name": "Santa Maria da Feira",
+          "country_name": "Portugal",
+          "map_coordinates": "40.926689,-8.545814",
+          "country_code": "PRT"
+        }
+      },
+      "sport_event_status": {
+        "status": "closed",
+        "match_status": "ended",
+        "home_score": 0,
+        "away_score": 1,
+        "winner_id": "sr:competitor:3008",
+        "period_scores": [
+          {
+            "home_score": 0,
+            "away_score": 0,
+            "type": "regular_period",
+            "number": 1
+          },
+          {
+            "home_score": 0,
+            "away_score": 1,
+            "type": "regular_period",
+            "number": 2
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+﻿{
+  "generated_at": "2019-07-26T12:00:00+00:00",
+  "schema": "http:\/\/schemas.sportradar.com\/bsa\/soccer\/v1\/json\/endpoints\/soccer\/schedule.json",
+  "sport_events": [
+    {
+      "id": "sr:match:18382095",
+      "scheduled": "2019-07-27T11:00:00+00:00",
+      "start_time_tbd": false,
+      "status": "not_started",
+      "tournament_round": {
+        "type": "group",
+        "number": 3,
+        "phase": "regular season"
+      },
+      "season": {
+        "id": "sr:season:67295",
+        "name": "Premier League 19\/20",
+        "start_date": "2019-07-12",
+        "end_date": "2020-05-25",
+        "year": "19\/20",
+        "tournament_id": "sr:tournament:203"
+      },
+      "tournament": {
+        "id": "sr:tournament:203",
+        "name": "Premier League",
+        "sport": {
+          "id": "sr:sport:1",
+          "name": "Soccer"
+        },
+        "category": {
+          "id": "sr:category:21",
+          "name": "Russia",
+          "country_code": "RUS"
+        }
+      },
+      "competitors": [
+        {
+          "id": "sr:competitor:74241",
+          "name": "FC Ufa",
+          "country": "Russia",
+          "country_code": "RUS",
+          "abbreviation": "UFA",
+          "qualifier": "home"
+        },
+        {
+          "id": "sr:competitor:2322",
+          "name": "FC Krylia Sovetov Samara",
+          "country": "Russia",
+          "country_code": "RUS",
+          "abbreviation": "KSS",
+          "qualifier": "away"
+        }
+      ],
+      "venue": {
+        "id": "sr:venue:16590",
+        "name": "Neftyanik Stadium",
+        "capacity": 15234,
+        "city_name": "Ufa",
+        "country_name": "Russia",
+        "map_coordinates": "54.825864,56.061450",
+        "country_code": "RUS"
+      }
+    },
+    {
+      "id": "sr:match:18382085",
+      "scheduled": "2019-07-27T13:30:00+00:00",
+      "start_time_tbd": false,
+      "status": "not_started",
+      "tournament_round": {
+        "type": "group",
+        "number": 3,
+        "phase": "regular season"
+      },
+      "season": {
+        "id": "sr:season:67295",
+        "name": "Premier League 19\/20",
+        "start_date": "2019-07-12",
+        "end_date": "2020-05-25",
+        "year": "19\/20",
+        "tournament_id": "sr:tournament:203"
+      },
+      "tournament": {
+        "id": "sr:tournament:203",
+        "name": "Premier League",
+        "sport": {
+          "id": "sr:sport:1",
+          "name": "Soccer"
+        },
+        "category": {
+          "id": "sr:category:21",
+          "name": "Russia",
+          "country_code": "RUS"
+        }
+      },
+      "competitors": [
+        {
+          "id": "sr:competitor:107213",
+          "name": "FC Tambov",
+          "country": "Russia",
+          "country_code": "RUS",
+          "abbreviation": "TAM",
+          "qualifier": "home"
+        },
+        {
+          "id": "sr:competitor:2323",
+          "name": "FC Spartak Moscow",
+          "country": "Russia",
+          "country_code": "RUS",
+          "abbreviation": "SPA",
+          "qualifier": "away"
+        }
+      ],
+      "venue": {
+        "id": "sr:venue:8681",
+        "name": "Spartak Stadium",
+        "capacity": 8000,
+        "city_name": "Tambov",
+        "country_name": "Russia",
+        "map_coordinates": "52.728177,41.452365",
+        "country_code": "RUS"
+      }
+    },
+    {
+      "id": "sr:match:18382083",
+      "scheduled": "2019-07-27T16:00:00+00:00",
+      "start_time_tbd": false,
+      "status": "not_started",
+      "tournament_round": {
+        "type": "group",
+        "number": 3,
+        "phase": "regular season"
+      },
+      "season": {
+        "id": "sr:season:67295",
+        "name": "Premier League 19\/20",
+        "start_date": "2019-07-12",
+        "end_date": "2020-05-25",
+        "year": "19\/20",
+        "tournament_id": "sr:tournament:203"
+      },
+      "tournament": {
+        "id": "sr:tournament:203",
+        "name": "Premier League",
+        "sport": {
+          "id": "sr:sport:1",
+          "name": "Soccer"
+        },
+        "category": {
+          "id": "sr:category:21",
+          "name": "Russia",
+          "country_code": "RUS"
+        }
+      },
+      "competitors": [
+        {
+          "id": "sr:competitor:34425",
+          "name": "FC Krasnodar",
+          "country": "Russia",
+          "country_code": "RUS",
+          "abbreviation": "KRA",
+          "qualifier": "home"
+        },
+        {
+          "id": "sr:competitor:2334",
+          "name": "PFC Sochi",
+          "country": "Russia",
+          "country_code": "RUS",
+          "abbreviation": "SOC",
+          "qualifier": "away"
+        }
+      ],
+      "venue": {
+        "id": "sr:venue:18974",
+        "name": "Krasnodar Stadium",
+        "capacity": 35074,
+        "city_name": "Krasnodar",
+        "country_name": "Russia",
+        "map_coordinates": "45.044167,39.029444",
+        "country_code": "RUS"
+      }
+    },
+    {
+      "id": "sr:match:18600382",
+      "scheduled": "2019-07-27T16:00:00+00:00",
+      "start_time_tbd": false,
+      "status": "not_started",
+      "tournament_round": {
+        "type": "group",
+        "number": 1,
+        "phase": "regular season"
+      },
+      "season": {
+        "id": "sr:season:66731",
+        "name": "First Division A 19\/20",
+        "start_date": "2019-07-26",
+        "end_date": "2020-06-01",
+        "year": "19\/20",
+        "tournament_id": "sr:tournament:38"
+      },
+      "tournament": {
+        "id": "sr:tournament:38",
+        "name": "First Division A",
+        "sport": {
+          "id": "sr:sport:1",
+          "name": "Soccer"
+        },
+        "category": {
+          "id": "sr:category:33",
+          "name": "Belgium",
+          "country_code": "BEL"
+        }
+      },
+      "competitors": [
+        {
+          "id": "sr:competitor:2929",
+          "name": "Cercle Brugge",
+          "country": "Belgium",
+          "country_code": "BEL",
+          "abbreviation": "CER",
+          "qualifier": "home"
+        },
+        {
+          "id": "sr:competitor:2901",
+          "name": "Standard Liege",
+          "country": "Belgium",
+          "country_code": "BEL",
+          "abbreviation": "STL",
+          "qualifier": "away"
+        }
+      ],
+      "venue": {
+        "id": "sr:venue:1187",
+        "name": "Jan Breydel Stadium",
+        "capacity": 29975,
+        "city_name": "Bruges",
+        "country_name": "Belgium",
+        "map_coordinates": "51.193272,3.180583",
+        "country_code": "BEL"
+      }
+    },
+    {
+      "id": "sr:match:18600384",
+      "scheduled": "2019-07-27T18:00:00+00:00",
+      "start_time_tbd": false,
+      "status": "not_started",
+      "tournament_round": {
+        "type": "group",
+        "number": 1,
+        "phase": "regular season"
+      },
+      "season": {
+        "id": "sr:season:66731",
+        "name": "First Division A 19\/20",
+        "start_date": "2019-07-26",
+        "end_date": "2020-06-01",
+        "year": "19\/20",
+        "tournament_id": "sr:tournament:38"
+      },
+      "tournament": {
+        "id": "sr:tournament:38",
+        "name": "First Division A",
+        "sport": {
+          "id": "sr:sport:1",
+          "name": "Soccer"
+        },
+        "category": {
+          "id": "sr:category:33",
+          "name": "Belgium",
+          "country_code": "BEL"
+        }
+      },
+      "competitors": [
+        {
+          "id": "sr:competitor:2895",
+          "name": "St. Truidense VV",
+          "country": "Belgium",
+          "country_code": "BEL",
+          "abbreviation": "STT",
+          "qualifier": "home"
+        },
+        {
+          "id": "sr:competitor:44019",
+          "name": "Royal Excel Mouscron",
+          "country": "Belgium",
+          "country_code": "BEL",
+          "abbreviation": "REM",
+          "qualifier": "away"
+        }
+      ],
+      "venue": {
+        "id": "sr:venue:1252",
+        "name": "Staaien",
+        "capacity": 14600,
+        "city_name": "Sint- Truiden",
+        "country_name": "Belgium",
+        "map_coordinates": "50.813474,5.166256",
+        "country_code": "BEL"
+      }
+    },
+    {
+      "id": "sr:match:18600386",
+      "scheduled": "2019-07-27T18:00:00+00:00",
+      "start_time_tbd": false,
+      "status": "not_started",
+      "tournament_round": {
+        "type": "group",
+        "number": 1,
+        "phase": "regular season"
+      },
+      "season": {
+        "id": "sr:season:66731",
+        "name": "First Division A 19\/20",
+        "start_date": "2019-07-26",
+        "end_date": "2020-06-01",
+        "year": "19\/20",
+        "tournament_id": "sr:tournament:38"
+      },
+      "tournament": {
+        "id": "sr:tournament:38",
+        "name": "First Division A",
+        "sport": {
+          "id": "sr:sport:1",
+          "name": "Soccer"
+        },
+        "category": {
+          "id": "sr:category:33",
+          "name": "Belgium",
+          "country_code": "BEL"
+        }
+      },
+      "competitors": [
+        {
+          "id": "sr:competitor:2933",
+          "name": "SV Zulte Waregem",
+          "country": "Belgium",
+          "country_code": "BEL",
+          "abbreviation": "ZUL",
+          "qualifier": "home"
+        },
+        {
+          "id": "sr:competitor:5044",
+          "name": "Yellow-Red KV Mechelen",
+          "country": "Belgium",
+          "country_code": "BEL",
+          "abbreviation": "YRM",
+          "qualifier": "away"
+        }
+      ],
+      "venue": {
+        "id": "sr:venue:1253",
+        "name": "Regenboogstadion",
+        "capacity": 12500,
+        "city_name": "Waregem",
+        "country_name": "Belgium",
+        "map_coordinates": "50.883056,3.428889",
+        "country_code": "BEL"
+      }
+    },
+    {
+      "id": "sr:match:18600388",
+      "scheduled": "2019-07-27T18:30:00+00:00",
+      "start_time_tbd": false,
+      "status": "not_started",
+      "tournament_round": {
+        "type": "group",
+        "number": 1,
+        "phase": "regular season"
+      },
+      "season": {
+        "id": "sr:season:66731",
+        "name": "First Division A 19\/20",
+        "start_date": "2019-07-26",
+        "end_date": "2020-06-01",
+        "year": "19\/20",
+        "tournament_id": "sr:tournament:38"
+      },
+      "tournament": {
+        "id": "sr:tournament:38",
+        "name": "First Division A",
+        "sport": {
+          "id": "sr:sport:1",
+          "name": "Soccer"
+        },
+        "category": {
+          "id": "sr:category:33",
+          "name": "Belgium",
+          "country_code": "BEL"
+        }
+      },
+      "competitors": [
+        {
+          "id": "sr:competitor:4859",
+          "name": "Waasland-Beveren",
+          "country": "Belgium",
+          "country_code": "BEL",
+          "abbreviation": "RSW",
+          "qualifier": "home"
+        },
+        {
+          "id": "sr:competitor:2888",
+          "name": "Club Brugge",
+          "country": "Belgium",
+          "country_code": "BEL",
+          "abbreviation": "BRU",
+          "qualifier": "away"
+        }
+      ],
+      "venue": {
+        "id": "sr:venue:3036",
+        "name": "Freethielstadion",
+        "capacity": 13200,
+        "city_name": "Beveren",
+        "country_name": "Belgium",
+        "map_coordinates": "51.214139,4.243931",
+        "country_code": "BEL"
+      }
+    }
+  ]
+}
