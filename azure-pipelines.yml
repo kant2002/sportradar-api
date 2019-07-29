@@ -26,5 +26,6 @@ steps:
   displayName: 'NuGet push'
   inputs:
     command: push
-    publishVstsFeed: 'sportradar'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '30604525-beb7-4eda-87a5-d7581086e7f7/8cb5ed78-47d8-4c0b-b1eb-ad0fbf33bea0'
     allowPackageConflicts: true
