@@ -25,7 +25,7 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
         /// <summary>
         /// Initializes a new instance of the SportEventStatus class.
         /// </summary>
-        public SportEventStatus(string status, string matchStatus, int homeScore, int awayScore, string winnerId, IList<PeriodScore> periodScores)
+        public SportEventStatus(string status, int homeScore, int awayScore, string matchStatus = default(string), string winnerId = default(string), IList<PeriodScore> periodScores = default(IList<PeriodScore>))
         {
             Status = status;
             MatchStatus = matchStatus;
@@ -82,18 +82,6 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
             if (Status == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "Status");
-            }
-            if (MatchStatus == null)
-            {
-                throw new ValidationException(ValidationRules.CannotBeNull, "MatchStatus");
-            }
-            if (WinnerId == null)
-            {
-                throw new ValidationException(ValidationRules.CannotBeNull, "WinnerId");
-            }
-            if (PeriodScores == null)
-            {
-                throw new ValidationException(ValidationRules.CannotBeNull, "PeriodScores");
             }
             if (PeriodScores != null)
             {

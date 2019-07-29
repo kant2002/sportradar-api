@@ -62,5 +62,54 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// </param>
         Task<HttpOperationResponse<DailyResults>> GetDailyResultsWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
+        /// <summary>
+        /// Get matches on the specific day
+        /// </summary>
+        /// <param name='accessLevel'>
+        /// Possible values include: 'x', 't'
+        /// </param>
+        /// <param name='leagueGroup'>
+        /// Possible values include: 'eu', 'intl', 'am', 'as', 'global',
+        /// 'other'
+        /// </param>
+        /// <param name='languageCode'>
+        /// </param>
+        /// <param name='year'>
+        /// The calendar year
+        /// </param>
+        /// <param name='month'>
+        /// The calendar month
+        /// </param>
+        /// <param name='day'>
+        /// The calendar day
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse<Schedule>> GetDailyScheduleWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get live results
+        /// </summary>
+        /// <param name='accessLevel'>
+        /// Possible values include: 'x', 't'
+        /// </param>
+        /// <param name='leagueGroup'>
+        /// Possible values include: 'eu', 'intl', 'am', 'as', 'global',
+        /// 'other'
+        /// </param>
+        /// <param name='languageCode'>
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        Task<HttpOperationResponse<LiveResult>> GetLiveResultsWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+
     }
 }

@@ -23,7 +23,7 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
         /// <summary>
         /// Initializes a new instance of the TournamentRound class.
         /// </summary>
-        public TournamentRound(string type, int number, string phase)
+        public TournamentRound(string type, int number, string phase = default(string))
         {
             Type = type;
             Number = number;
@@ -62,10 +62,6 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
             if (Type == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "Type");
-            }
-            if (Phase == null)
-            {
-                throw new ValidationException(ValidationRules.CannotBeNull, "Phase");
             }
         }
     }

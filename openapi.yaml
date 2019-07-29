@@ -109,15 +109,12 @@ components:
           type: string
         country_name:
           type: string
-        map_coordinates:
-          type: string
         country_code:
           type: string
     TournamentRound:
       required:
         - type
         - number
-        - phase
       properties:
         type:
           type: string
@@ -166,11 +163,8 @@ components:
     SportEventStatus:
       required:
         - status
-        - match_status
         - home_score
         - away_score
-        - winner_id
-        - period_scores
       properties:
         status:
           type: string
@@ -195,7 +189,6 @@ components:
         - season
         - tournament
         - competitors
-        - venue
       properties:
         id:
           type: string
@@ -204,6 +197,8 @@ components:
           format: date-time
         start_time_tbd:
           type: boolean
+        status:
+          type: string
         tournament_round:
             $ref: "#/components/schemas/TournamentRound"
         season:
@@ -235,6 +230,37 @@ components:
           type: string
           format: date-time
         schema:
+          type: string
+        results:
+          type: array
+          items:
+            $ref: "#/components/schemas/DailyResult"
+    Schedule:
+      required:
+        - generated_at
+        - schema
+        - sport_events
+      properties:
+        generated_at:
+          type: string
+          format: date-time
+        schema:
+          type: string
+        sport_events:
+          type: array
+          items:
+            $ref: "#/components/schemas/SportEvent"
+    LiveResult:
+      required:
+        - generated_at
+        - schema
+      properties:
+        generated_at:
+          type: string
+          format: date-time
+        schema:
+          type: string
+        message:
           type: string
         results:
           type: array
@@ -273,8 +299,52 @@ paths:
             format: int32
       responses:
         '200':
-          description: Array of available practices
+          description: Array of available daily results
           content:
             application/json:    
               schema:
                 $ref: "#/components/schemas/DailyResults"
+  /schedules/{year}-{month}-{day}/schedule.json:
+    get:
+      summary: Get matches on the specific day
+      operationId: getDailySchedule
+      parameters:
+        - name: year
+          in: path
+          description: The calendar year
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: month
+          in: path
+          description: The calendar month
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: day
+          in: path
+          description: The calendar day
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Daily schedule
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/Schedule"
+  /schedules/live/results.json:
+    get:
+      summary: Get live results
+      operationId: getLiveResults
+      responses:
+        '200':
+          description: Daily schedule
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/LiveResult"

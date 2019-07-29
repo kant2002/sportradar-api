@@ -77,5 +77,111 @@ namespace AndriiKurdiumov.SportRadar.Client
                 }
             }
 
+            /// <summary>
+            /// Get matches on the specific day
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='accessLevel'>
+            /// Possible values include: 'x', 't'
+            /// </param>
+            /// <param name='leagueGroup'>
+            /// Possible values include: 'eu', 'intl', 'am', 'as', 'global', 'other'
+            /// </param>
+            /// <param name='languageCode'>
+            /// </param>
+            /// <param name='year'>
+            /// The calendar year
+            /// </param>
+            /// <param name='month'>
+            /// The calendar month
+            /// </param>
+            /// <param name='day'>
+            /// The calendar day
+            /// </param>
+            public static Schedule GetDailySchedule(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, int year, int month, int day)
+            {
+                return operations.GetDailyScheduleAsync(accessLevel, leagueGroup, languageCode, year, month, day).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Get matches on the specific day
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='accessLevel'>
+            /// Possible values include: 'x', 't'
+            /// </param>
+            /// <param name='leagueGroup'>
+            /// Possible values include: 'eu', 'intl', 'am', 'as', 'global', 'other'
+            /// </param>
+            /// <param name='languageCode'>
+            /// </param>
+            /// <param name='year'>
+            /// The calendar year
+            /// </param>
+            /// <param name='month'>
+            /// The calendar month
+            /// </param>
+            /// <param name='day'>
+            /// The calendar day
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<Schedule> GetDailyScheduleAsync(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.GetDailyScheduleWithHttpMessagesAsync(accessLevel, leagueGroup, languageCode, year, month, day, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <summary>
+            /// Get live results
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='accessLevel'>
+            /// Possible values include: 'x', 't'
+            /// </param>
+            /// <param name='leagueGroup'>
+            /// Possible values include: 'eu', 'intl', 'am', 'as', 'global', 'other'
+            /// </param>
+            /// <param name='languageCode'>
+            /// </param>
+            public static LiveResult GetLiveResults(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode)
+            {
+                return operations.GetLiveResultsAsync(accessLevel, leagueGroup, languageCode).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Get live results
+            /// </summary>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='accessLevel'>
+            /// Possible values include: 'x', 't'
+            /// </param>
+            /// <param name='leagueGroup'>
+            /// Possible values include: 'eu', 'intl', 'am', 'as', 'global', 'other'
+            /// </param>
+            /// <param name='languageCode'>
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task<LiveResult> GetLiveResultsAsync(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                using (var _result = await operations.GetLiveResultsWithHttpMessagesAsync(accessLevel, leagueGroup, languageCode, null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
     }
 }

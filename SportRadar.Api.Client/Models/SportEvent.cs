@@ -25,11 +25,12 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
         /// <summary>
         /// Initializes a new instance of the SportEvent class.
         /// </summary>
-        public SportEvent(string id, System.DateTime scheduled, bool startTimeTbd, TournamentRound tournamentRound, Season season, Tournament tournament, IList<Competitor> competitors, Venue venue)
+        public SportEvent(string id, System.DateTime scheduled, bool startTimeTbd, TournamentRound tournamentRound, Season season, Tournament tournament, IList<Competitor> competitors, string status = default(string), Venue venue = default(Venue))
         {
             Id = id;
             Scheduled = scheduled;
             StartTimeTbd = startTimeTbd;
+            Status = status;
             TournamentRound = tournamentRound;
             Season = season;
             Tournament = tournament;
@@ -57,6 +58,11 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
         /// </summary>
         [JsonProperty(PropertyName = "start_time_tbd")]
         public bool StartTimeTbd { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "status")]
+        public string Status { get; set; }
 
         /// <summary>
         /// </summary>
@@ -110,10 +116,6 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
             if (Competitors == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "Competitors");
-            }
-            if (Venue == null)
-            {
-                throw new ValidationException(ValidationRules.CannotBeNull, "Venue");
             }
             if (TournamentRound != null)
             {

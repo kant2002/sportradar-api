@@ -1,0 +1,62 @@
+﻿{
+  "generated_at": "2019-07-29T05:19:12+00:00",
+  "schema": "http:\/\/schemas.sportradar.com\/bsa\/soccer\/v1\/json\/endpoints\/soccer\/results.json",
+  "results": [
+    {
+      "sport_event": {
+        "id": "sr:match:18788684",
+        "scheduled": "2019-07-28T16:00:00+00:00",
+        "start_time_tbd": false,
+        "tournament_round": {
+          "type": "cup",
+          "name": "round_of_64",
+          "cup_round_match_number": 1,
+          "cup_round_matches": 1,
+          "phase": "1st_part_of_season_1st_leg"
+        },
+        "season": {
+          "id": "sr:season:66865",
+          "name": "Cup 19\/20",
+          "start_date": "2019-07-25",
+          "end_date": "2020-06-07",
+          "year": "19\/20",
+          "tournament_id": "sr:tournament:731"
+        },
+        "tournament": {
+          "id": "sr:tournament:731",
+          "name": "Cup",
+          "sport": {
+            "id": "sr:sport:1",
+            "name": "Soccer"
+          },
+          "category": {
+            "id": "sr:category:92",
+            "name": "Estonia",
+            "country_code": "EST"
+          }
+        },
+        "competitors": [
+          {
+            "id": "sr:competitor:413913",
+            "name": "Tallinna JK Legion II",
+            "country": "Estonia",
+            "country_code": "EST",
+            "abbreviation": "TAL",
+            "qualifier": "home"
+          },
+          {
+            "id": "sr:competitor:452663",
+            "name": "FC Aksi Wolves",
+            "country": "Estonia",
+            "country_code": "EST",
+            "abbreviation": "FCA",
+            "qualifier": "away"
+          }
+        ]
+      },
+      "sport_event_status": {
+        "status": "not_started"
+      }
+    }
+  ]
+}

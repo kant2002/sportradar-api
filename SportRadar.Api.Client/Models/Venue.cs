@@ -23,14 +23,13 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
         /// <summary>
         /// Initializes a new instance of the Venue class.
         /// </summary>
-        public Venue(string id, string name, int capacity, string cityName, string countryName, string mapCoordinates, string countryCode)
+        public Venue(string id, string name, int capacity, string cityName, string countryName, string countryCode)
         {
             Id = id;
             Name = name;
             Capacity = capacity;
             CityName = cityName;
             CountryName = countryName;
-            MapCoordinates = mapCoordinates;
             CountryCode = countryCode;
             CustomInit();
         }
@@ -67,11 +66,6 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
 
         /// <summary>
         /// </summary>
-        [JsonProperty(PropertyName = "map_coordinates")]
-        public string MapCoordinates { get; set; }
-
-        /// <summary>
-        /// </summary>
         [JsonProperty(PropertyName = "country_code")]
         public string CountryCode { get; set; }
 
@@ -98,10 +92,6 @@ namespace AndriiKurdiumov.SportRadar.Client.Models
             if (CountryName == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "CountryName");
-            }
-            if (MapCoordinates == null)
-            {
-                throw new ValidationException(ValidationRules.CannotBeNull, "MapCoordinates");
             }
             if (CountryCode == null)
             {
