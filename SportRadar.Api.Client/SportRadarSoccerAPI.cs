@@ -120,14 +120,8 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// </param>
         /// <param name='languageCode'>
         /// </param>
-        /// <param name='year'>
+        /// <param name='date'>
         /// The calendar year
-        /// </param>
-        /// <param name='month'>
-        /// The calendar month
-        /// </param>
-        /// <param name='day'>
-        /// The calendar day
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -150,7 +144,7 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<DailyResults>> GetDailyResultsWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<DailyResults>> GetDailyResultsWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, System.DateTime date, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (accessLevel == null)
             {
@@ -174,21 +168,17 @@ namespace AndriiKurdiumov.SportRadar.Client
                 tracingParameters.Add("accessLevel", accessLevel);
                 tracingParameters.Add("leagueGroup", leagueGroup);
                 tracingParameters.Add("languageCode", languageCode);
-                tracingParameters.Add("year", year);
-                tracingParameters.Add("month", month);
-                tracingParameters.Add("day", day);
+                tracingParameters.Add("date", date);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "GetDailyResults", tracingParameters);
             }
             // Construct URL
             var _baseUrl = BaseUri;
-            var _url = _baseUrl + (_baseUrl.EndsWith("/") ? "" : "/") + "schedules/{year}-{month}-{day}/results.json";
+            var _url = _baseUrl + (_baseUrl.EndsWith("/") ? "" : "/") + "schedules/{date}/results.json";
             _url = _url.Replace("{access_level}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(accessLevel, SerializationSettings).Trim('"')));
             _url = _url.Replace("{league_group}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(leagueGroup, SerializationSettings).Trim('"')));
             _url = _url.Replace("{language_code}", System.Uri.EscapeDataString(languageCode));
-            _url = _url.Replace("{year}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(year, SerializationSettings).Trim('"')));
-            _url = _url.Replace("{month}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(month, SerializationSettings).Trim('"')));
-            _url = _url.Replace("{day}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(day, SerializationSettings).Trim('"')));
+            _url = _url.Replace("{date}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(date, new DateJsonConverter()).Trim('"')));
             // Create HTTP transport objects
             var _httpRequest = new HttpRequestMessage();
             HttpResponseMessage _httpResponse = null;
@@ -287,14 +277,8 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// </param>
         /// <param name='languageCode'>
         /// </param>
-        /// <param name='year'>
+        /// <param name='date'>
         /// The calendar year
-        /// </param>
-        /// <param name='month'>
-        /// The calendar month
-        /// </param>
-        /// <param name='day'>
-        /// The calendar day
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -317,7 +301,7 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<Schedule>> GetDailyScheduleWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<Schedule>> GetDailyScheduleWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, System.DateTime date, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (accessLevel == null)
             {
@@ -341,21 +325,17 @@ namespace AndriiKurdiumov.SportRadar.Client
                 tracingParameters.Add("accessLevel", accessLevel);
                 tracingParameters.Add("leagueGroup", leagueGroup);
                 tracingParameters.Add("languageCode", languageCode);
-                tracingParameters.Add("year", year);
-                tracingParameters.Add("month", month);
-                tracingParameters.Add("day", day);
+                tracingParameters.Add("date", date);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "GetDailySchedule", tracingParameters);
             }
             // Construct URL
             var _baseUrl = BaseUri;
-            var _url = _baseUrl + (_baseUrl.EndsWith("/") ? "" : "/") + "schedules/{year}-{month}-{day}/schedule.json";
+            var _url = _baseUrl + (_baseUrl.EndsWith("/") ? "" : "/") + "schedules/{date}/schedule.json";
             _url = _url.Replace("{access_level}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(accessLevel, SerializationSettings).Trim('"')));
             _url = _url.Replace("{league_group}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(leagueGroup, SerializationSettings).Trim('"')));
             _url = _url.Replace("{language_code}", System.Uri.EscapeDataString(languageCode));
-            _url = _url.Replace("{year}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(year, SerializationSettings).Trim('"')));
-            _url = _url.Replace("{month}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(month, SerializationSettings).Trim('"')));
-            _url = _url.Replace("{day}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(day, SerializationSettings).Trim('"')));
+            _url = _url.Replace("{date}", System.Uri.EscapeDataString(SafeJsonConvert.SerializeObject(date, new DateJsonConverter()).Trim('"')));
             // Create HTTP transport objects
             var _httpRequest = new HttpRequestMessage();
             HttpResponseMessage _httpResponse = null;

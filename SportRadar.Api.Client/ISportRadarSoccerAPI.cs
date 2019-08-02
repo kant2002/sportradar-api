@@ -45,14 +45,8 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// </param>
         /// <param name='languageCode'>
         /// </param>
-        /// <param name='year'>
+        /// <param name='date'>
         /// The calendar year
-        /// </param>
-        /// <param name='month'>
-        /// The calendar month
-        /// </param>
-        /// <param name='day'>
-        /// The calendar day
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -60,7 +54,7 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<DailyResults>> GetDailyResultsWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<DailyResults>> GetDailyResultsWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, System.DateTime date, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get matches on the specific day
@@ -74,14 +68,8 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// </param>
         /// <param name='languageCode'>
         /// </param>
-        /// <param name='year'>
+        /// <param name='date'>
         /// The calendar year
-        /// </param>
-        /// <param name='month'>
-        /// The calendar month
-        /// </param>
-        /// <param name='day'>
-        /// The calendar day
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -89,7 +77,7 @@ namespace AndriiKurdiumov.SportRadar.Client
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        Task<HttpOperationResponse<Schedule>> GetDailyScheduleWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<Schedule>> GetDailyScheduleWithHttpMessagesAsync(string accessLevel, string leagueGroup, string languageCode, System.DateTime date, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get live results

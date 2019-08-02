@@ -29,18 +29,12 @@ namespace AndriiKurdiumov.SportRadar.Client
             /// </param>
             /// <param name='languageCode'>
             /// </param>
-            /// <param name='year'>
+            /// <param name='date'>
             /// The calendar year
             /// </param>
-            /// <param name='month'>
-            /// The calendar month
-            /// </param>
-            /// <param name='day'>
-            /// The calendar day
-            /// </param>
-            public static DailyResults GetDailyResults(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, int year, int month, int day)
+            public static DailyResults GetDailyResults(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, System.DateTime date)
             {
-                return operations.GetDailyResultsAsync(accessLevel, leagueGroup, languageCode, year, month, day).GetAwaiter().GetResult();
+                return operations.GetDailyResultsAsync(accessLevel, leagueGroup, languageCode, date).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -57,21 +51,15 @@ namespace AndriiKurdiumov.SportRadar.Client
             /// </param>
             /// <param name='languageCode'>
             /// </param>
-            /// <param name='year'>
+            /// <param name='date'>
             /// The calendar year
-            /// </param>
-            /// <param name='month'>
-            /// The calendar month
-            /// </param>
-            /// <param name='day'>
-            /// The calendar day
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<DailyResults> GetDailyResultsAsync(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<DailyResults> GetDailyResultsAsync(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, System.DateTime date, CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetDailyResultsWithHttpMessagesAsync(accessLevel, leagueGroup, languageCode, year, month, day, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetDailyResultsWithHttpMessagesAsync(accessLevel, leagueGroup, languageCode, date, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -91,18 +79,12 @@ namespace AndriiKurdiumov.SportRadar.Client
             /// </param>
             /// <param name='languageCode'>
             /// </param>
-            /// <param name='year'>
+            /// <param name='date'>
             /// The calendar year
             /// </param>
-            /// <param name='month'>
-            /// The calendar month
-            /// </param>
-            /// <param name='day'>
-            /// The calendar day
-            /// </param>
-            public static Schedule GetDailySchedule(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, int year, int month, int day)
+            public static Schedule GetDailySchedule(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, System.DateTime date)
             {
-                return operations.GetDailyScheduleAsync(accessLevel, leagueGroup, languageCode, year, month, day).GetAwaiter().GetResult();
+                return operations.GetDailyScheduleAsync(accessLevel, leagueGroup, languageCode, date).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -119,21 +101,15 @@ namespace AndriiKurdiumov.SportRadar.Client
             /// </param>
             /// <param name='languageCode'>
             /// </param>
-            /// <param name='year'>
+            /// <param name='date'>
             /// The calendar year
-            /// </param>
-            /// <param name='month'>
-            /// The calendar month
-            /// </param>
-            /// <param name='day'>
-            /// The calendar day
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<Schedule> GetDailyScheduleAsync(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, int year, int month, int day, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<Schedule> GetDailyScheduleAsync(this ISportRadarSoccerAPI operations, string accessLevel, string leagueGroup, string languageCode, System.DateTime date, CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetDailyScheduleWithHttpMessagesAsync(accessLevel, leagueGroup, languageCode, year, month, day, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetDailyScheduleWithHttpMessagesAsync(accessLevel, leagueGroup, languageCode, date, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }

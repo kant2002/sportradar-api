@@ -271,32 +271,18 @@ security:
   - defaultSecurityScheme: []
 
 paths:
-  /schedules/{year}-{month}-{day}/results.json:
+  /schedules/{date}/results.json:
     get:
       summary: Get daily results
       operationId: getDailyResults
       parameters:
-        - name: year
+        - name: date
           in: path
           description: The calendar year
           required: true
           schema:
-            type: integer
-            format: int32
-        - name: month
-          in: path
-          description: The calendar month
-          required: true
-          schema:
-            type: integer
-            format: int32
-        - name: day
-          in: path
-          description: The calendar day
-          required: true
-          schema:
-            type: integer
-            format: int32
+            type: string
+            format: date
       responses:
         '200':
           description: Array of available daily results
@@ -304,32 +290,18 @@ paths:
             application/json:    
               schema:
                 $ref: "#/components/schemas/DailyResults"
-  /schedules/{year}-{month}-{day}/schedule.json:
+  /schedules/{date}/schedule.json:
     get:
       summary: Get matches on the specific day
       operationId: getDailySchedule
       parameters:
-        - name: year
+        - name: date
           in: path
           description: The calendar year
           required: true
           schema:
-            type: integer
-            format: int32
-        - name: month
-          in: path
-          description: The calendar month
-          required: true
-          schema:
-            type: integer
-            format: int32
-        - name: day
-          in: path
-          description: The calendar day
-          required: true
-          schema:
-            type: integer
-            format: int32
+            type: string
+            format: date
       responses:
         '200':
           description: Daily schedule
